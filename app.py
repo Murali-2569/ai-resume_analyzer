@@ -195,81 +195,31 @@ else:
 
         st.markdown("---")
 
-    # Show score chart
-    st.markdown("## 📊 Match Score Comparison's For All Resumes :")
-    chart_df = pd.DataFrame(resume_scores, columns=["Resume", "Score"])
-    st.bar_chart(chart_df.set_index("Resume"))
+        # Show score chart
+        st.markdown("## 📊 Match Score Comparison's For All Resumes :")
+        chart_df = pd.DataFrame(resume_scores, columns=["Resume", "Score"])
+        st.bar_chart(chart_df.set_index("Resume"))
 
-    # Export to CSV
-    result_df = pd.DataFrame(all_results)
-    csv = result_df.to_csv(index=False).encode('utf-8')
-    st.download_button("📥 Download Results as CSV", data=csv, file_name="resume_analysis.csv", mime="text/csv")
-
-    # Export to TXT Summary
-    def generate_summary_txt(resume_data):
-        summary = f"Resume: {resume_data['filename']}\n"
-        summary += f"Match Score with JD: {resume_data['jd_score']:.2f}%\n"
-        summary += f"Top Predicted Roles: {', '.join([role for role, _ in resume_data['top_roles']])}\n"
-        summary += f"Missing Keywords: {', '.join(resume_data['missing_keywords'][:15])}\n"
-        summary += f"Improvement Suggestions: {', '.join(resume_data['improvements'][:10])}\n"
-        summary += f"Missing Skills: {', '.join(resume_data['missing_skills'][:20])}\n"
-        return summary
-
-    if st.button("📄 Download Summary Report (TXT)"):
-        summaries = [generate_summary_txt(data) for data in all_resumes_data]
-        summary_text = "\n\n---\n\n".join(summaries)
-        st.download_button("📥 Download All Summaries", summary_text, "summary_report.txt")
-    
-        # Export to PDF Summary
-        from fpdf import FPDF
-        import base64
-
-        pdf = FPDF()
-        pdf.set_auto_page_break(auto=True, margin=15)
-        pdf.add_page()
-        pdf.set_font("Arial", size=12)
-        pdf.cell(200, 10, txt="AI Resume Analyzer - Summary Report", ln=True, align='C')
-        pdf.ln(10)
+        # ✅ Prepare final results for CSV and TXT
+        final_csv_data = []
+        final_txt_summaries = []
 
         for resume_data in all_resumes_data:
-            pdf.set_font("Arial", size=11)
-            pdf.multi_cell(0, 10, txt=f"Resume: {resume_data['filename']}")
-            pdf.multi_cell(0, 10, txt=f"Match Score: {resume_data['jd_score']:.2f}%")
-            pdf.multi_cell(0, 10, txt=f"Top Predicted Roles: {', '.join([role for role, _ in resume_data['top_roles']])}")
-            pdf.multi_cell(0, 10, txt=f"Missing Keywords: {', '.join(resume_data['missing_keywords'][:15])}")
-            pdf.multi_cell(0, 10, txt=f"Suggestions: {', '.join(resume_data['improvements'][:10])}")
-            pdf.multi_cell(0, 10, txt=f"Missing Skills: {', '.join(resume_data['missing_skills'][:20])}")
-            pdf.ln(10)
+            suitable = "✅ Yes" if is_resume_suitable(resume_data["filename"], jd_role, role_skill_map)[0] else "❌ No"
 
-        pdf_file = "summary_report.pdf"
-        pdf.output(pdf_file)
-
-        with open(pdf_file, "rb") as f:
-            pdf_bytes = f.read()
-
-        b64_pdf = base64.b64encode(pdf_bytes).decode()
-        href = f'<a href="data:application/pdf;base64,{b64_pdf}" download="summary_report.pdf">📄 Download Summary Report (PDF)</a>'
-        st.markdown(href, unsafe_allow_html=True)
-    
-    else:
-      st.info("📌 Please upload both a job description and at least one resume.")
-    
-        # ✅ Prepare clean results for CSV and TXT
-    final_csv_data = []
-    final_txt_summaries = []
-
-    for resume_data in all_resumes_data:
-        final_csv_data.append({
-            "Resume": resume_data["filename"],
-            "Match Score (%)": f"{resume_data['jd_score']:.2f}",
-            "Top 3 Predicted Roles": ", ".join([r for r, _ in resume_data["top_roles"]]),
-            "Missing Keywords": ", ".join(resume_data["missing_keywords"][:15]),
-            "Improvement Suggestions": ", ".join(resume_data["improvements"][:10]),
-            "Missing Skills": ", ".join(resume_data["missing_skills"][:20])
-        })
+            final_csv_data.append({
+                "Resume": resume_data["filename"],
+                "Match Score (%)": f"{resume_data['jd_score']:.2f}",
+                "Suitable": suitable,
+                "Top 3 Predicted Roles": ", ".join([r for r, _ in resume_data["top_roles"]]),
+                "Missing Keywords": ", ".join(resume_data["missing_keywords"][:15]),
+                "Improvement Suggestions": ", ".join(resume_data["improvements"][:10]),
+                "Missing Skills": ", ".join(resume_data["missing_skills"][:20])
+            })
 
         summary = f"Resume: {resume_data['filename']}\n"
         summary += f"Match Score: {resume_data['jd_score']:.2f}%\n"
+        summary += f"Suitable: {suitable}\n"
         summary += f"Top 3 Predicted Roles: {', '.join([r for r, _ in resume_data['top_roles']])}\n"
         summary += f"Missing Keywords: {', '.join(resume_data['missing_keywords'][:15])}\n"
         summary += f"Improvement Suggestions: {', '.join(resume_data['improvements'][:10])}\n"
@@ -277,14 +227,18 @@ else:
         summary += "-"*50
         final_txt_summaries.append(summary)
 
-    # 📥 Download as CSV
-    final_csv_df = pd.DataFrame(final_csv_data)
-    csv_bytes = final_csv_df.to_csv(index=False).encode("utf-8")
-    st.download_button("📥 Download Summary (CSV)", data=csv_bytes, file_name="resume_analysis.csv", mime="text/csv")
+        # 📥 Download as CSV
+        final_csv_df = pd.DataFrame(final_csv_data)
+        csv_bytes = final_csv_df.to_csv(index=False).encode("utf-8")
+        st.download_button("📥 Download Summary (CSV)", data=csv_bytes, file_name="resume_analysis.csv", mime="text/csv")
 
-    # 📥 Download as TXT
-    full_summary_txt = "\n\n".join(final_txt_summaries)
-    st.download_button("📄 Download Summary (TXT)", data=full_summary_txt, file_name="summary_report.txt", mime="text/plain")
+        # 📥 Download as TXT
+        full_summary_txt = "\n\n".join(final_txt_summaries)
+        st.download_button("📄 Download Summary (TXT)", data=full_summary_txt, file_name="summary_report.txt", mime="text/plain")
+    else:
+        st.warning("⚠️ Please upload both a job description and at least one resume to analyze.")       
+    
+       
 
 
 st.markdown("---")
