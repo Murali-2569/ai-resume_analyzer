@@ -250,77 +250,42 @@ else:
         b64_pdf = base64.b64encode(pdf_bytes).decode()
         href = f'<a href="data:application/pdf;base64,{b64_pdf}" download="summary_report.pdf">📄 Download Summary Report (PDF)</a>'
         st.markdown(href, unsafe_allow_html=True)
-     
-    # Download buttons for summary report
-        from fpdf import FPDF
-        import base64
-
-        # --- Generate Text for Summary ---
-        def generate_summary_txt(resume_data):
-            summary = f"Resume: {resume_data['filename']}\n"
-            summary += f"Match Score with JD: {resume_data['jd_score']:.2f}%\n"
-            summary += f"Top Predicted Roles: {', '.join([role for role, _ in resume_data['top_roles']])}\n"
-            summary += f"Missing Keywords: {', '.join(resume_data['missing_keywords'][:15])}\n"
-            summary += f"Improvement Suggestions: {', '.join(resume_data['improvements'][:10])}\n"
-            summary += f"Missing Skills: {', '.join(resume_data['missing_skills'][:20])}\n"
-            return summary
-
-        st.subheader("📄 Download Summary Report")
-
-        # Prepare summaries
-        summaries_txt = [generate_summary_txt(data) for data in all_resumes_data]
-        summary_text = "\n\n---\n\n".join(summaries_txt)
-
-        # ---- TXT Button
-        st.download_button("📥 Download as TXT", summary_text, "summary_report.txt")
-
-        # ---- CSV Button
-        summary_csv_data = []
-        for data in all_resumes_data:
-            summary_csv_data.append({
-                "Resume": data['filename'],
-                "JD Match Score (%)": f"{data['jd_score']:.2f}",
-                "Top Roles": ", ".join([role for role, _ in data['top_roles']]),
-                "Missing Keywords": ", ".join(data['missing_keywords'][:15]),
-                "Improvement Suggestions": ", ".join(data['improvements'][:10]),
-                "Missing Skills": ", ".join(data['missing_skills'][:20]),
-            })
-
-        summary_df = pd.DataFrame(summary_csv_data)
-        csv_data = summary_df.to_csv(index=False).encode('utf-8')
-        st.download_button("📥 Download as CSV", csv_data, file_name="summary_report.csv", mime="text/csv")
-
-        # ---- PDF Button
-        pdf = FPDF()
-        pdf.set_auto_page_break(auto=True, margin=15)
-        pdf.add_page()
-        pdf.set_font("Arial", size=12)
-        pdf.cell(200, 10, txt="AI Resume Analyzer - Summary Report", ln=True, align='C')
-        pdf.ln(10)
-
-        for data in all_resumes_data:
-            pdf.set_font("Arial", size=11)
-            pdf.multi_cell(0, 10, txt=f"Resume: {data['filename']}")
-            pdf.multi_cell(0, 10, txt=f"Match Score: {data['jd_score']:.2f}%")
-            pdf.multi_cell(0, 10, txt=f"Top Predicted Roles: {', '.join([role for role, _ in data['top_roles']])}")
-            pdf.multi_cell(0, 10, txt=f"Missing Keywords: {', '.join(data['missing_keywords'][:15])}")
-            pdf.multi_cell(0, 10, txt=f"Suggestions: {', '.join(data['improvements'][:10])}")
-            pdf.multi_cell(0, 10, txt=f"Missing Skills: {', '.join(data['missing_skills'][:20])}")
-            pdf.ln(10)
-
-        pdf_file = "summary_report.pdf"
-        pdf.output(pdf_file)
-
-        with open(pdf_file, "rb") as f:
-            pdf_bytes = f.read()
-
-        b64_pdf = base64.b64encode(pdf_bytes).decode()
-        pdf_link = f'<a href="data:application/pdf;base64,{b64_pdf}" download="summary_report.pdf">📄 Download as PDF</a>'
-        st.markdown(pdf_link, unsafe_allow_html=True)
-
-
+    
     else:
-       st.info("📌 Please upload both a job description and at least one resume.")
+      st.info("📌 Please upload both a job description and at least one resume.")
+    
+        # ✅ Prepare clean results for CSV and TXT
+    final_csv_data = []
+    final_txt_summaries = []
+
+    for resume_data in all_resumes_data:
+        final_csv_data.append({
+            "Resume": resume_data["filename"],
+            "Match Score (%)": f"{resume_data['jd_score']:.2f}",
+            "Top 3 Predicted Roles": ", ".join([r for r, _ in resume_data["top_roles"]]),
+            "Missing Keywords": ", ".join(resume_data["missing_keywords"][:15]),
+            "Improvement Suggestions": ", ".join(resume_data["improvements"][:10]),
+            "Missing Skills": ", ".join(resume_data["missing_skills"][:20])
+        })
+
+        summary = f"Resume: {resume_data['filename']}\n"
+        summary += f"Match Score: {resume_data['jd_score']:.2f}%\n"
+        summary += f"Top 3 Predicted Roles: {', '.join([r for r, _ in resume_data['top_roles']])}\n"
+        summary += f"Missing Keywords: {', '.join(resume_data['missing_keywords'][:15])}\n"
+        summary += f"Improvement Suggestions: {', '.join(resume_data['improvements'][:10])}\n"
+        summary += f"Missing Skills: {', '.join(resume_data['missing_skills'][:20])}\n"
+        summary += "-"*50
+        final_txt_summaries.append(summary)
+
+    # 📥 Download as CSV
+    final_csv_df = pd.DataFrame(final_csv_data)
+    csv_bytes = final_csv_df.to_csv(index=False).encode("utf-8")
+    st.download_button("📥 Download Summary (CSV)", data=csv_bytes, file_name="resume_analysis.csv", mime="text/csv")
+
+    # 📥 Download as TXT
+    full_summary_txt = "\n\n".join(final_txt_summaries)
+    st.download_button("📄 Download Summary (TXT)", data=full_summary_txt, file_name="summary_report.txt", mime="text/plain")
+
 
 st.markdown("---")
 st.markdown("<div style='text-align: center; color: green;'>Made by <strong> ❤️ Murali Krishna</strong> and  <strong>Jarvis AI </strong></div>", unsafe_allow_html=True)
