@@ -1,0 +1,13 @@
+Job Title: Data Scientist
+
+Responsibilities:
+- Analyze large datasets to extract insights and predict business outcomes
+- Design machine learning models for regression, classification, clustering
+- Work with Python, Scikit-Learn, TensorFlow, Pandas
+- Develop dashboards and visualizations (using Tableau/Power BI)
+- Collaborate with stakeholders to define analytics requirements
+
+Requirements:
+- Proficient in SQL, Python, machine learning techniques, and data visualization
+- Experience with large datasets and statistical models
+- Strong communication and analytical skills

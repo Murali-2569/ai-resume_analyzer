@@ -1,0 +1,12 @@
+streamlit
+pandas
+numpy
+scikit-learn
+spacy
+pdfminer.six
+re
+os
+PyMuPDF
+pdfkit
+matplotlib
+fPDF

@@ -1,0 +1,16 @@
+Name: Alice Kumar
+Email: alice@example.com
+
+Summary:
+Entry-level Data Scientist with hands-on experience in Python, machine learning, and data visualization.
+
+Skills:
+- Python, Pandas, NumPy, Scikit-learn, Matplotlib
+- SQL, Tableau
+- Regression, Classification, Clustering, Model Evaluation
+- Git, Linux
+
+Projects:
+- Predicting customer churn using Random Forest (accuracy 88%)
+- Time-series forecasting of sales using ARIMA models
+- Dashboard for marketing insights using Tableau

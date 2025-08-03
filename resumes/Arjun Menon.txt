@@ -1,0 +1,24 @@
+Name: Arjun Menon  
+Email: arjun.menon@outlook.com | Phone: +91 99880 77665  
+LinkedIn: linkedin.com/in/arjunmenon | GitHub: github.com/arjunML  
+
+Professional Summary:  
+AI/ML enthusiast with 1.5 years of experience in predictive modeling and NLP. Proficient in deploying models using AWS services and contributing to scalable systems.
+
+Work Experience:  
+**Junior ML Developer – XYZ Tech**, Bengaluru (2023–Present)  
+- Built and optimized sentiment analysis models with 85% accuracy  
+- Used Amazon SageMaker for model deployment  
+- Applied SHAP for model interpretability  
+
+Skills:  
+- Python, Scikit-learn, TensorFlow, AWS  
+- NLP, Explainable AI, CI/CD pipelines  
+- Fairness auditing using AIF360  
+
+Education:  
+B.Tech in Computer Science – VIT Vellore – CGPA: 8.9  
+
+Projects:  
+- Loan Default Prediction with Bias Mitigation  
+- Resume Ranker App using BERT embeddings 

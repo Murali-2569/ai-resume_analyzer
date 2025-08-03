@@ -1,0 +1,25 @@
+Name: Riya Sharma  
+Email: riya.sharma@email.com | Phone: +91 98765 43210  
+Location: Bengaluru, India  
+
+Career Objective:  
+Recent Computer Science graduate with a strong foundation in Java, Python, and database concepts. Seeking to begin a career as a Software Engineer Trainee at Infosys to leverage problem-solving abilities in real-world applications.
+
+Education:  
+B.Tech in Computer Science – PES University, Bengaluru (2021–2025) – CGPA: 8.6  
+
+Technical Skills:  
+- Languages: Java, Python, SQL  
+- Tools: Git, VS Code, MySQL Workbench  
+- Concepts: OOPs, DBMS, Data Structures  
+
+Projects:  
+1. **Portfolio Website** – Built personal website using HTML, CSS, JS  
+2. **Weather App** – REST API-based real-time weather dashboard  
+
+Certifications:  
+- Infosys Springboard – Java & Database Essentials  
+
+Soft Skills:  
+- Team collaboration  
+- Clear written communication  
