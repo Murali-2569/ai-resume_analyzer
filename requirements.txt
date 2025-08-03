@@ -7,5 +7,5 @@ pdfminer.six
 PyMuPDF
 pdfkit
 matplotlib
-fPDF
+fpdf
 PyPDF2
