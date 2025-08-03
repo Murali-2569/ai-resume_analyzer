@@ -14,4 +14,4 @@ showFooter = false
 showWarningOnDirectExecution = false
 
 [ui]
-hideTopBar = true
+hideTopBar = false
