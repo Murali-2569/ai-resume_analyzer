@@ -59,7 +59,7 @@ if jd_file and resumes:
 top_n = st.selectbox("Select Top N Resumes to Show", options=[1, 3, 5, 10, 12, 15, 20], index=2)
 min_score = st.selectbox("Minimum Match Score (%)", options=[0, 20, 30, 50, 70, 80, 90, 100], index=2)
 
-# --- Filter resumes by selected threshold and Top N ---
+# Filter resumes by selected threshold and Top N
 resume_scores = []
 resume_texts = {}
 
@@ -182,44 +182,33 @@ else:
         chart_df_roles = pd.DataFrame(role_scores_sorted, columns=["Role", "Score"])
         st.bar_chart(chart_df_roles.set_index("Role"))
 
-        # 📝 Save for summary
-        all_resumes_data.append({
-            "filename": resume_file.name,
-            "jd_score": jd_score,
-            "top_roles": top_roles,
-            "missing_keywords": jd_missing_keywords,
-            "improvements": jd_improvement,
-            "present_skills": present,
-            "missing_skills": missing
-        })
 
         st.markdown("---")
+
+    else:
+        st.success("✅ All resumes processed successfully!")
 
         # Show score chart
         st.markdown("## 📊 Match Score Comparison's For All Resumes :")
         chart_df = pd.DataFrame(resume_scores, columns=["Resume", "Score"])
         st.bar_chart(chart_df.set_index("Resume"))
 
-        # ✅ Prepare final results for CSV and TXT
-        final_csv_data = []
-        final_txt_summaries = []
+    # ✅ Prepare clean results for CSV and TXT
+    final_csv_data = []
+    final_txt_summaries = []
 
-        for resume_data in all_resumes_data:
-            suitable = "✅ Yes" if is_resume_suitable(resume_data["filename"], jd_role, role_skill_map)[0] else "❌ No"
-
-            final_csv_data.append({
-                "Resume": resume_data["filename"],
-                "Match Score (%)": f"{resume_data['jd_score']:.2f}",
-                "Suitable": suitable,
-                "Top 3 Predicted Roles": ", ".join([r for r, _ in resume_data["top_roles"]]),
-                "Missing Keywords": ", ".join(resume_data["missing_keywords"][:15]),
-                "Improvement Suggestions": ", ".join(resume_data["improvements"][:10]),
-                "Missing Skills": ", ".join(resume_data["missing_skills"][:20])
-            })
+    for resume_data in all_resumes_data:
+        final_csv_data.append({
+            "Resume": resume_data["filename"],
+            "Match Score (%)": f"{resume_data['jd_score']:.2f}",
+            "Top 3 Predicted Roles": ", ".join([r for r, _ in resume_data["top_roles"]]),
+            "Missing Keywords": ", ".join(resume_data["missing_keywords"][:15]),
+            "Improvement Suggestions": ", ".join(resume_data["improvements"][:10]),
+            "Missing Skills": ", ".join(resume_data["missing_skills"][:20])
+        })
 
         summary = f"Resume: {resume_data['filename']}\n"
         summary += f"Match Score: {resume_data['jd_score']:.2f}%\n"
-        summary += f"Suitable: {suitable}\n"
         summary += f"Top 3 Predicted Roles: {', '.join([r for r, _ in resume_data['top_roles']])}\n"
         summary += f"Missing Keywords: {', '.join(resume_data['missing_keywords'][:15])}\n"
         summary += f"Improvement Suggestions: {', '.join(resume_data['improvements'][:10])}\n"
@@ -227,20 +216,18 @@ else:
         summary += "-"*50
         final_txt_summaries.append(summary)
 
-        # 📥 Download as CSV
-        final_csv_df = pd.DataFrame(final_csv_data)
-        csv_bytes = final_csv_df.to_csv(index=False).encode("utf-8")
-        st.download_button("📥 Download Summary (CSV)", data=csv_bytes, file_name="resume_analysis.csv", mime="text/csv")
+    # 📥 Download as CSV
+    final_csv_df = pd.DataFrame(final_csv_data)
+    csv_bytes = final_csv_df.to_csv(index=False).encode("utf-8")
+    st.download_button("📥 Download Summary (CSV)", data=csv_bytes, file_name="resume_analysis.csv", mime="text/csv")
 
-        # 📥 Download as TXT
-        full_summary_txt = "\n\n".join(final_txt_summaries)
-        st.download_button("📄 Download Summary (TXT)", data=full_summary_txt, file_name="summary_report.txt", mime="text/plain")
-    else:
-        st.warning("⚠️ Please upload both a job description and at least one resume to analyze.")       
+    # 📥 Download as TXT
+    full_summary_txt = "\n\n".join(final_txt_summaries)
+    st.download_button("📄 Download Summary (TXT)", data=full_summary_txt, file_name="summary_report.txt", mime="text/plain")
+
 
 st.markdown("---")
 st.markdown("<div style='text-align: center; color: green;'>Made by <strong> ❤️ Murali Krishna</strong> and  <strong>Jarvis AI </strong></div>", unsafe_allow_html=True)
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("👨‍💻 Made by **Murali Krishna** and **Jarvis AI...**")
- 
