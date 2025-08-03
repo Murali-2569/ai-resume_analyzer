@@ -237,9 +237,6 @@ else:
         st.download_button("📄 Download Summary (TXT)", data=full_summary_txt, file_name="summary_report.txt", mime="text/plain")
     else:
         st.warning("⚠️ Please upload both a job description and at least one resume to analyze.")       
-    
-       
-
 
 st.markdown("---")
 st.markdown("<div style='text-align: center; color: green;'>Made by <strong> ❤️ Murali Krishna</strong> and  <strong>Jarvis AI </strong></div>", unsafe_allow_html=True)
