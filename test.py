@@ -1,49 +1,6 @@
-# import os
-# from resume_matcher_utils import extract_text_from_pdf, extract_text_from_txt, calculate_match_score
-
-# JD_FOLDER = "jobs"
-# RESUME_FOLDER = "resumes"
-
-# def read_text(file_path):
-#     if file_path.endswith(".pdf"):
-#         return extract_text_from_pdf(file_path)
-#     elif file_path.endswith(".txt"):
-#         return extract_text_from_txt(file_path)
-#     else:
-#         return None
-
-# print("=== MATCH RESULTS ===\n")
-
-# for jd_file in os.listdir(JD_FOLDER):
-#     jd_path = os.path.join(JD_FOLDER, jd_file)
-#     jd_text = read_text(jd_path)
-#     if jd_text is None:
-#         print(f"{jd_file} ➝ Skipped (Unsupported file type)")
-#         continue
-
-#     for resume_file in os.listdir(RESUME_FOLDER):
-#         resume_path = os.path.join(RESUME_FOLDER, resume_file)
-#         resume_text = read_text(resume_path)
-#         if resume_text is None:
-#             print(f"{resume_file} ➝ Skipped (Unsupported file type)")
-#             continue
-
-#         score = calculate_match_score(jd_text, resume_text)
-#         print(f"{resume_file} ➝ Match Score: {score*100:.2f}%")
-
-
 from resume_utils import extract_text_from_pdf, extract_text_from_txt, calculate_match_score, get_missing_keywords
 import os
 import csv
-
-# 🔧 Role-to-skill mapping
-role_skill_map = {
-    "Data Scientist": ["python", "pandas", "scikit-learn", "sql", "statistics", "machine learning", "data analysis"],
-    "Machine Learning Engineer": ["python", "tensorflow", "scikit-learn", "keras", "deep learning", "deployment", "mlops"],
-    "Data Analyst": ["excel", "sql", "power bi", "tableau", "data visualization", "python", "data cleaning"],
-    "AI Engineer": ["python", "transformers", "pytorch", "nlp", "deep learning", "opencv", "llms", "chatgpt"],
-    "Software Engineer": ["java", "python", "c++", "problem solving", "algorithms", "data structures"],
-}
 
 # 📌 Helper functions
 def suggest_roles(resume_text, role_skill_map):
@@ -66,6 +23,24 @@ def improvement_suggestions(resume_text, target_role, role_skill_map):
 # 🗂️ Folders
 job_folder = "jobs"
 resume_folder = "resumes"
+
+role_skill_map = {
+    "Machine Learning Engineer": ["machine learning", "tensorflow", "scikit-learn", "pandas", "classification", "prediction", "models", "deep learning", "algorithms"],
+    "AI/ML Researcher": ["deep learning", "neural networks", "reinforcement learning", "NLP", "generative models", "research", "experiments", "pytorch", "transformers"],
+    "Data Scientist": ["data analysis", "statistics", "python", "machine learning", "visualization", "pandas", "numpy", "regression", "classification"],
+    "Data Analyst": ["excel", "sql", "tableau", "powerbi", "data visualization", "analysis", "statistics", "reporting"],
+    "Software Engineer": ["data structures", "algorithms", "python", "java", "c++", "git", "oop", "problem solving", "api"],
+    "Full Stack Developer": ["html", "css", "javascript", "react", "node.js", "express", "mongodb", "api", "git", "deployment"],
+    "Frontend Developer": ["html", "css", "javascript", "react", "vue", "angular", "bootstrap", "sass"],
+    "Backend Developer": ["node.js", "django", "flask", "express", "api", "sql", "mongodb", "python", "java", "server"],
+    "UI/UX Designer": ["figma", "adobe xd", "wireframes", "prototyping", "user research", "usability testing", "design systems", "interaction design"],
+    "Mobile App Developer": ["flutter", "react native", "android", "ios", "dart", "swift", "kotlin", "mobile UI"],
+    "Cloud Engineer": ["aws", "azure", "gcp", "devops", "docker", "kubernetes", "ci/cd", "linux", "cloud architecture"],
+    "DevOps Engineer": ["docker", "kubernetes", "jenkins", "ci/cd", "linux", "aws", "monitoring", "infrastructure as code"],
+    "Cybersecurity Analyst": ["cybersecurity", "network security", "penetration testing", "firewalls", "encryption", "threat analysis", "vulnerability assessment", "siem"],
+    "Business Analyst": ["business analysis", "requirements gathering", "stakeholder management", "excel", "data analysis", "documentation", "gap analysis", "jira"],
+    "Blockchain Developer": ["blockchain", "solidity", "smart contracts", "ethereum", "web3", "cryptography", "dapps"],
+}
 
 # 📄 Load JD
 job_files = [f for f in os.listdir(job_folder) if f.endswith('.txt')]
