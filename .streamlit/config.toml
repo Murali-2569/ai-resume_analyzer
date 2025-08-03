@@ -1,5 +1,5 @@
 [theme]
-base="light"  # or "dark"
+base="dark"  # or "light"
 
 [server]
 headless = true
@@ -9,3 +9,9 @@ gatherUsageStats = false
 
 [client]
 showFooter = false
+
+[global]
+showWarningOnDirectExecution = false
+
+[ui]
+hideTopBar = true
