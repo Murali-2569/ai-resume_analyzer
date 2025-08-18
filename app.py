@@ -10,12 +10,11 @@ from resume_utils import (
     role_skill_map
 )
 
-st.set_page_config(page_title="Ai-Powered Resume Analyzer", page_icon="📄", layout="wide")
-st.title("📄🧠 AI-Powered Resume Analyzer")
+st.set_page_config(page_title="AI Resume Analyzer", page_icon="📄", layout="wide")
+st.title("📄🧠 AI Resume Analyzer")
 st.markdown("##### Crafted by Murali Krishna & Jarvis AI")
 
-
-                                            # ---------- Helpers (used in both modes) ----------
+# ---------- Helpers (used in both modes) ----------
 def extract_role_from_jd(jd_text):
     jd_text_lower = jd_text.lower()
     for role in role_skill_map.keys():
@@ -40,17 +39,17 @@ def split_present_missing(resume_text, skills):
     return present, missing
 
 # ---------- Entry ----------
-mode = st.selectbox("I am a :", ["-- Select --", "Student 🎓", "Recruiter 🧑‍💼"])
+mode = st.selectbox("I am a:", ["-- Select --", "Student 🎓", "Recruiter 🧑‍💼"])
 
-
-                                     # ========================== STUDENT MODE ==========================
+# ========================== STUDENT MODE ==========================
 if mode.startswith("Student"):
-    jd_file = st.file_uploader("📑 Upload Job Description (.pdf or .txt)", type=["pdf", "txt"], accept_multiple_files=False)
+    jd_file = st.file_uploader("📑 Upload Job Description (.txt)", type=["txt"])
+    st.markdown(" ")
     resumes = st.file_uploader("📂 Upload Resumes (.pdf or .txt)", type=["pdf", "txt"], accept_multiple_files=True)
 
     if jd_file and resumes:
         jd_text = jd_file.read().decode("utf-8", errors="ignore")
-        jd_role = extract_role_from_jd(jd_text)
+        jd_role = extract_role_from_jd(jd_text) or "Machine Learning Engineer"
 
         st.success(f"✅ Job description uploaded! Detected Role: `{jd_role}`")
         st.write("### 🧠 Job Description Preview:")
@@ -183,15 +182,15 @@ if mode.startswith("Student"):
     st.markdown("---")
     st.markdown("<div style='text-align: center; color: green;'>Made by <strong>❤️ Murali Krishna</strong> and <strong>Jarvis AI</strong></div>", unsafe_allow_html=True)
 
-                                          # ========================== RECRUITER MODE ==========================
+# ========================== RECRUITER MODE ==========================
 elif mode.startswith("Recruiter"):
-    jd_file = st.file_uploader("📑 Upload Company's Job Description (.pdf or .txt)", type=["pdf", "txt"], accept_multiple_files=False)
-    st.markdown("")
+    jd_file = st.file_uploader("📑 Upload Job Description (.txt)", type=["txt"])
+    st.markdown(" ")
     resumes = st.file_uploader("📂 Upload Candidate Resumes (.pdf or .txt)", type=["pdf", "txt"], accept_multiple_files=True)
 
     if jd_file and resumes:
         jd_text = jd_file.read().decode("utf-8", errors="ignore")
-        jd_role = extract_role_from_jd(jd_text)
+        jd_role = extract_role_from_jd(jd_text) or "Software Engineer"
 
         st.success(f"✅ JD uploaded! Detected Role: `{jd_role}`")
         st.write("### 🧠 Job Description Preview:")
