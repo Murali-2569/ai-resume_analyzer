@@ -11,7 +11,7 @@ from resume_utils import (
 )
 
 st.set_page_config(page_title="AI Resume Analyzer", page_icon="📄", layout="wide")
-st.title("📄🧠 AI Resume Analyzer")
+st.title("📄🧠 AI-Powered Resume Analyzer")
 st.markdown("##### Crafted by Murali Krishna & Jarvis AI")
 
 # ---------- Helpers (used in both modes) ----------
