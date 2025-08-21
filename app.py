@@ -12,7 +12,25 @@ from resume_utils import (
 
 st.set_page_config(page_title="AI Resume Analyzer", page_icon="📄", layout="wide")
 st.title("📄🧠 AI-Powered Resume Analyzer")
-st.markdown("##### Crafted by Murali Krishna & Jarvis AI")
+st.write("Analyze resumes against job descriptions to find the best matches and improve your chances of landing that dream job!")
+
+# ---------------- Role Selection with Back Button ----------------
+if "role_choice" not in st.session_state:
+    st.session_state.role_choice = None
+
+if not st.session_state.role_choice:
+    role_choice = st.selectbox(
+        "I am a:",
+        ["-- Select --", "Job Seeker 🎓", "Recruiter 🧑‍💼"],
+        key="role_select"
+    )
+    if role_choice and role_choice != "-- Select --":
+        st.session_state.role_choice = role_choice
+        st.rerun()
+else:
+    if st.button("<< Back"):
+        st.session_state.role_choice = None
+        st.rerun()
 
 # ---------- Helpers (used in both modes) ----------
 def extract_role_from_jd(jd_text):
@@ -38,27 +56,28 @@ def split_present_missing(resume_text, skills):
             missing.append(skill)
     return present, missing
 
-# ---------- Entry ----------
-mode = st.selectbox("I am a:", ["-- Select --", "Student 🎓", "Recruiter 🧑‍💼"])
-
-# ========================== STUDENT MODE ==========================
-if mode.startswith("Student"):
-    jd_file = st.file_uploader("📑 Upload Job Description (.txt)", type=["txt"])
+# ========================== JOB SEEKER MODE ==========================
+if st.session_state.role_choice == "Job Seeker 🎓":
+    st.subheader(" 📑 Job Seeker Section... ")
+    st.success("👋 Welcome Job Seeker! Upload your resumes and a JD to check your match scores and skill gaps.")
+    jd_file = st.file_uploader("📑 Upload Company's Job Description (.pdf or .txt)", type=["pdf", "txt"])
     st.markdown(" ")
-    resumes = st.file_uploader("📂 Upload Resumes (.pdf or .txt)", type=["pdf", "txt"], accept_multiple_files=True)
+    resumes = st.file_uploader("📂 Upload Your Resume (.pdf or .txt)", type=["pdf", "txt"], accept_multiple_files=True)
 
     if jd_file and resumes:
         jd_text = jd_file.read().decode("utf-8", errors="ignore")
         jd_role = extract_role_from_jd(jd_text) or "Machine Learning Engineer"
 
         st.success(f"✅ Job description uploaded! Detected Role: `{jd_role}`")
-        st.write("### 🧠 Job Description Preview:")
-        st.code(jd_text[:500] + ("..." if len(jd_text) > 500 else ""), language="text")
+        
+    # # If job description is need , Comment it out !
+    #     st.write("### 🧠 Job Description Preview:")
+    #     st.code(jd_text[:500] + ("..." if len(jd_text) > 500 else ""), language="text")
 
-        # Filters (in main area as requested)
+        # Filters
         col_a, col_b = st.columns(2)
         with col_a:
-            top_n = st.selectbox("Select Top N Resumes to Show", options=[1, 3, 5, 10, 12, 15, 20], index=2)
+            top_n = st.selectbox("Select Top N Resumes to Show", options=[1, 3, 5, 10, 15, 20, 25, 30], index=2)
         with col_b:
             min_score = st.selectbox("Minimum Match Score (%)", options=[0, 20, 30, 50, 70, 80, 90, 100], index=2)
 
@@ -180,11 +199,13 @@ if mode.startswith("Student"):
                                file_name="summary_report.txt", mime="text/plain")
 
     st.markdown("---")
-    st.markdown("<div style='text-align: center; color: green;'>Made by <strong>❤️ Murali Krishna</strong> and <strong>Jarvis AI</strong></div>", unsafe_allow_html=True)
+    # st.markdown("<div style='text-align: center; color: green;'>Made by <strong>❤️ Murali Krishna</strong> and <strong>Jarvis </strong></div>", unsafe_allow_html=True)
 
 # ========================== RECRUITER MODE ==========================
-elif mode.startswith("Recruiter"):
-    jd_file = st.file_uploader("📑 Upload Job Description (.txt)", type=["txt"])
+elif st.session_state.role_choice == "Recruiter 🧑‍💼":
+    st.subheader("📑 Recruiter Section...")
+    st.success("👋 Welcome Recruiter! Upload a JD and candidate resumes to quickly find the best matches.")
+    jd_file = st.file_uploader("📑 Upload Your Organization's Job Description (.pdf or .txt)", type=["pdf", "txt"])
     st.markdown(" ")
     resumes = st.file_uploader("📂 Upload Candidate Resumes (.pdf or .txt)", type=["pdf", "txt"], accept_multiple_files=True)
 
@@ -196,14 +217,14 @@ elif mode.startswith("Recruiter"):
         st.write("### 🧠 Job Description Preview:")
         st.code(jd_text[:500] + ("..." if len(jd_text) > 500 else ""), language="text")
 
-        # Controls (not sidebar)
+        # Controls
         col1, col2 = st.columns(2)
         with col1:
             top_n = st.selectbox("Top N Resumes to Show", [1, 3, 5, 10, 15, 20, 50], index=2)
         with col2:
             min_score = st.selectbox("Minimum Match Score (%)", [0, 20, 30, 40, 50, 60, 70, 80, 90], index=3)
 
-        # Score all resumes
+        # Score resumes
         resume_scores, resume_texts = [], {}
         for rf in resumes:
             txt = extract_text_from_file(rf)
@@ -219,7 +240,6 @@ elif mode.startswith("Recruiter"):
         if not top_ranked:
             st.warning("⚠️ No resumes meet the selected match score threshold.")
         else:
-            # Overview table
             overview_rows = []
             for name, score in top_ranked:
                 _, txt = resume_texts[name]
@@ -241,7 +261,6 @@ elif mode.startswith("Recruiter"):
             st.markdown("---")
             st.subheader("🧾 Candidate Details")
 
-            # Detailed blocks (like student view)
             all_resumes_data = []
             for name, score in top_ranked:
                 rf, txt = resume_texts[name]
@@ -281,7 +300,7 @@ elif mode.startswith("Recruiter"):
                     st.markdown("#### ❌ Missing Skills:")
                     st.markdown(", ".join(missing[:20]) or "—")
 
-                # Predicted roles + chart
+                # Predicted roles
                 role_scores = []
                 for rname in role_skill_map:
                     sc, _ = get_match_score(txt, " ".join(role_skill_map[rname]))
@@ -337,8 +356,99 @@ elif mode.startswith("Recruiter"):
                                data="\n\n".join(final_txt_summaries),
                                file_name="recruiter_summary.txt", mime="text/plain")
 
+
     st.markdown("---")
-    st.markdown("<div style='text-align: center; color: green;'>Made by <strong>❤️ Murali Krishna</strong> and <strong>Jarvis AI</strong></div>", unsafe_allow_html=True)
+    # st.markdown("<div style='text-align: center; color: green;'>Made by <strong>❤️ Murali Krishna</strong> and <strong>Jarvis </strong></div>", unsafe_allow_html=True)
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("👨‍💻 Made by **Murali Krishna** and **Jarvis AI...**")
+st.sidebar.markdown("👨‍💻 Crafted by **Murali Krishna** and **Jarvis ...**")
+
+# ===================== FOOTER =====================
+st.markdown("""
+<style>
+.footer {
+    background-color: #232c38;
+    color: #e7e7e7;
+    padding: 30px 0 10px 0;
+    font-size: 16px;
+    margin-top: 40px;
+}
+.footer hr {
+    border-color: #555;
+    margin-top: 18px;
+    margin-bottom: 12px;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+.footer-section {
+    flex: 1;
+    min-width: 260px;
+    margin-bottom: 16px;
+}
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 7px;
+}
+.footer-icons a {
+    color: #44aaff;
+    margin-right: 12px;
+    font-size: 26px;
+    text-decoration: none;
+}
+.footer-icons img {
+    vertical-align: middle;
+}
+.footer-bottom {
+    text-align: center;
+    font-size: 15px;
+    color: #bbb;
+    margin-top: 10px;
+}
+</style>
+
+<div class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>AI Resume Analyzer</h3>
+      <div>
+        Empowering careers through advanced AI technology.<br>
+        Helping students and recruiters make smarter decisions.
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>Features</h3>
+      <div>
+        AI-Powered Matching<br>
+        Career Guidance<br>
+        Market Intelligence<br>
+        Predictive Analytics
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>Connect</h3>
+      <div class="footer-icons">
+        <a href="https://twitter.com/" target="_blank" title="Twitter">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" width="24" height="24"/>
+        </a>
+        <a href="https://www.linkedin.com/in/muralikrishna-banoth/" target="_blank" title="LinkedIn">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" width="24" height="24"/>
+        </a>
+        <a href="https://github.com/Murali-2569" target="_blank" title="GitHub">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" width="24" height="24"/>
+        </a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="footer-bottom">
+    © 2025 All Rights Reserved ✅ <br>AI-Powered Resume Analyzer.
+            Built by Murali Krishna...
+  </div>
+</div>
+""", unsafe_allow_html=True)

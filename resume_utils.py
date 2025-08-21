@@ -1,24 +1,16 @@
 import re
 import PyPDF2
+import json
+import os
 
-# ===== Roles and Skills =====
-role_skill_map = {
-    "Machine Learning Engineer": ["machine learning", "tensorflow", "scikit-learn", "pandas", "classification", "prediction", "models", "deep learning", "algorithms"],
-    "AI/ML Researcher": ["deep learning", "neural networks", "reinforcement learning", "NLP", "generative models", "research", "experiments", "pytorch", "transformers"],
-    "Data Scientist": ["data analysis", "statistics", "python", "machine learning", "visualization", "pandas", "numpy", "regression", "classification"],
-    "Data Analyst": ["excel", "sql", "tableau", "powerbi", "data visualization", "analysis", "statistics", "reporting"],
-    "Software Engineer": ["data structures", "algorithms", "python", "java", "c++", "git", "oop", "problem solving", "api"],
-    "Full Stack Developer": ["html", "css", "javascript", "react", "node.js", "express", "mongodb", "api", "git", "deployment"],
-    "Frontend Developer": ["html", "css", "javascript", "react", "vue", "angular", "bootstrap", "sass"],
-    "Backend Developer": ["node.js", "django", "flask", "express", "api", "sql", "mongodb", "python", "java", "server"],
-    "UI/UX Designer": ["figma", "adobe xd", "wireframes", "prototyping", "user research", "usability testing", "design systems", "interaction design"],
-    "Mobile App Developer": ["flutter", "react native", "android", "ios", "dart", "swift", "kotlin", "mobile UI"],
-    "Cloud Engineer": ["aws", "azure", "gcp", "devops", "docker", "kubernetes", "ci/cd", "linux", "cloud architecture"],
-    "DevOps Engineer": ["docker", "kubernetes", "jenkins", "ci/cd", "linux", "aws", "monitoring", "infrastructure as code"],
-    "Cybersecurity Analyst": ["cybersecurity", "network security", "penetration testing", "firewalls", "encryption", "threat analysis", "vulnerability assessment", "siem"],
-    "Business Analyst": ["business analysis", "requirements gathering", "stakeholder management", "excel", "data analysis", "documentation", "gap analysis", "jira"],
-    "Blockchain Developer": ["blockchain", "solidity", "smart contracts", "ethereum", "web3", "cryptography", "dapps"],
-}
+# ===== Load Roles and Skills from JSON =====
+def load_role_skill_map(json_path="role_skill_map.json"):
+    if os.path.exists(json_path):
+        with open(json_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+role_skill_map = load_role_skill_map()
 
 # ===== Extract text from PDF/TXT =====
 def extract_text_from_file(uploaded_file):
