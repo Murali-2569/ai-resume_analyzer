@@ -32,6 +32,5 @@
     "Database Administrator": ["database management", "sql", "performance tuning", "backup and recovery", "data modeling", "database security", "oracle", "mysql", "postgresql"],
     "Sales Engineer": ["technical sales", "product demonstrations", "customer relationship management", "solution selling", "sales presentations", "negotiation skills", "crm software", "technical support"],
     "SEO Specialist": ["search engine optimization", "keyword research", "on-page optimization", "off-page optimization", "content optimization", "analytics", "google search console", "seo tools"],
-    "Digital Marketing Specialist": ["digital marketing", "social media marketing", "content marketing", "email marketing", "seo", "ppc", "analytics", "google ads", "facebook ads", "marketing automation"],
+    "Digital Marketing Specialist": ["digital marketing", "social media marketing", "content marketing", "email marketing", "seo", "ppc", "analytics", "google ads", "facebook ads", "marketing automation"]
 }
-
