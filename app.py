@@ -364,6 +364,12 @@ st.sidebar.markdown("---")
 st.sidebar.markdown("👨‍💻 Crafted by **Murali Krishna** and **Jarvis ...**")
 
 # ===================== FOOTER =====================
+st.markdown(" ")
+st.markdown(" ")
+st.markdown(" ")
+st.markdown(" ")
+st.markdown(" ")
+st.markdown(" ")
 st.markdown("""
 <style>
 .footer {
