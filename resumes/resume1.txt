@@ -1,0 +1,22 @@
+MURALI KRISHNA
+Email: krishna@example.com
+Phone: +91-9876543210
+
+Objective:
+Aspiring Data Scientist with strong foundation in Machine Learning, Python, and Data Analysis.
+
+Skills:
+- Python, Pandas, NumPy, Matplotlib
+- Machine Learning, Scikit-learn
+- SQL, Data Cleaning
+- Excel, Data Visualization
+- Git, GitHub
+
+Projects:
+- Customer Churn Prediction using Random Forest
+- House Price Prediction using Linear Regression
+- Sales Dashboard using Power BI
+
+Education:
+B.Tech in AI & ML – 2025 (Expected)
+XYZ Institute of Technology

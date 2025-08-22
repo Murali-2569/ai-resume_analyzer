@@ -1,0 +1,79 @@
+✅ Sample Resume – Computer Lab Technician (99% Match)
+
+Name: Ashraf Shaik
+Phone: +91 99887 65432
+Email: ashraf_shaik.143@example.com
+
+Location: Bangalore, India
+
+Professional Summary
+
+Proactive Computer Lab Technician with 5+ years of experience in managing computer laboratories for universities and training institutes. Expert in operating system installation, hardware troubleshooting, networking, software installation, license management, and programming lab support. Adept at ensuring lab resource management, cybersecurity, data backup, and technical support for smooth academic operations. Recognized for maintaining 99% lab uptime and assisting students and faculty in C, C++, Java, and Python programming labs.
+
+Core Skills:
+Operating System Installation (Windows & Linux Administration)
+
+Hardware Troubleshooting & Maintenance
+
+Networking Basics (LAN/Wi-Fi, IP Configuration)
+
+Software Installation & License Management
+
+Lab Resource Management & Inventory Control
+
+Programming Lab Support (C, C++, Java, Python)
+
+Cybersecurity & Data Backup Implementation
+
+Technical Support & User Training
+
+Communication Skills & Collaboration with Faculty
+
+Work Experience:
+Senior Computer Lab Technician
+Indian Institute of Information Technology (IIIT), Bangalore
+2020 – Present
+
+Installed and configured Windows/Linux operating systems, IDEs (Eclipse, VS Code, PyCharm), and academic software for 200+ lab computers.
+
+Handled hardware troubleshooting including desktops, printers, projectors, and networking devices.
+
+Provided programming lab support in C, C++, Java, and Python, ensuring smooth practical sessions.
+
+Managed lab resources and software licenses, ensuring 100% compliance with academic policies.
+
+Implemented cybersecurity protocols and scheduled data backups, reducing risks of data loss by 30%.
+
+Delivered technical support to students and faculty, resolving 95% of issues on first contact.
+
+Computer Lab Technician
+National College of Engineering, Bangalore
+2017 – 2020
+
+Assisted in operating system installation (Windows/Linux) and regular updates.
+
+Managed LAN setup, IP configuration, and Wi-Fi troubleshooting.
+
+Conducted system maintenance, antivirus updates, and equipment calibration.
+
+Maintained detailed lab usage reports and coordinated with faculty for practical exams.
+
+Education:
+B.Sc. in Computer Science – Bangalore University (2016)
+
+Diploma in Hardware & Networking – NIIT (2015)
+
+Certifications
+
+CompTIA A+ (2018) – Hardware & Software Troubleshooting
+
+CCNA (2019) – Networking Fundamentals
+
+Microsoft Certified: Windows Administrator (2021)
+
+Projects & Contributions:
+Lab Automation Project – Automated software installation and updates across 100+ PCs using shell and batch scripts.
+
+Cybersecurity Initiative – Developed a user-level access control system to protect lab computers from unauthorized use.
+
+Data Backup System – Set up scheduled cloud and local data backups, ensuring 99% reliability.

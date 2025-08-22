@@ -1,0 +1,55 @@
+Austin, TX | olivia.turner@email.com | LinkedIn: linkedin.com/in/oliviaturner | GitHub: github.com/oliviaturner
+
+Summary
+Experienced DevOps Engineer skilled in automation, infrastructure as code, and CI/CD management for cloud-native applications. Improved deployment speeds by 70% and reduced system downtime through robust monitoring and containerization solutions.
+
+Skills
+DevOps Tools: Jenkins, Git, Docker, Kubernetes, Ansible, Terraform
+
+Cloud: AWS, Azure, GCP
+
+Monitoring: Prometheus, Grafana
+
+Scripting: Python, Shell, Go
+
+Professional Experience
+Senior DevOps Engineer
+CloudOps Solutions, Austin, TX
+Feb 2022 – Present
+
+Automated deployment pipelines with Jenkins and Docker, reducing release cycles from weekly to daily.
+
+Managed Kubernetes clusters scaling to 200+ nodes with 99.98% uptime.
+
+Implemented Terraform for infrastructure provisioning across multi-cloud environments.
+
+Set up monitoring and alerting, cutting incident response times by 50%.
+
+DevOps Engineer
+TechSphere, Austin, TX
+May 2019 – Jan 2022
+
+Migrated legacy systems to containers and cloud infrastructure, reducing maintenance costs by 35%.
+
+Developed scripts for automated server configuration and patch management.
+
+Education
+Bachelor of Science in Computer Engineering
+University of Texas at Austin
+Graduated May 2019
+
+Certifications
+AWS Certified DevOps Engineer – Professional
+
+Docker Certified Associate
+
+HashiCorp Certified: Terraform Associate
+
+Projects
+CI/CD Pipeline Automation
+
+Developed multi-stage pipelines for microservices, improving quality and deployment speed.
+
+Container Orchestration
+
+Designed Kubernetes architecture for high-availability, auto-scaling systems.

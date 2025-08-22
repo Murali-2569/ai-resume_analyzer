@@ -1,0 +1,55 @@
+Mumbai, India | rajesh.nair@email.com | LinkedIn: linkedin.com/in/rajeshnair
+
+Summary
+Detail-oriented Cyber Security Analyst with 4+ years securing enterprise networks and systems. Skilled in threat monitoring, vulnerability assessment, and incident response. Proven track record of reducing security breaches by 30% and ensuring ongoing compliance with international standards.
+
+Skills
+Security Tools: SIEM (Splunk, QRadar), IDS/IPS, Firewalls (Palo Alto, Cisco), Wireshark
+
+Standards: ISO 27001, NIST, GDPR
+
+Penetration Testing, Vulnerability Assessment, Risk Analysis
+
+Scripting: Python, Bash
+
+Professional Experience
+Cyber Security Analyst
+SecureIT Pvt Ltd, Mumbai, India
+April 2021 – Present
+
+Monitored 100+ servers using SIEM tools and reduced threats by 40%.
+
+Conducted monthly vulnerability scans and led remediation projects closing 300+ issues.
+
+Responded to 15 major incidents, minimizing downtime and data loss.
+
+Trained staff on cybersecurity best practices, leading to 20% fewer phishing incidents.
+
+Security Operations Center (SOC) Analyst
+Cybershield India, Mumbai
+July 2018 – March 2021
+
+Investigated and responded to real-time security alerts.
+
+Created automation scripts reducing false positive rate by 35%.
+
+Worked with compliance team ensuring adherence to security standards.
+
+Education
+Bachelor of Science in Information Security
+University of Mumbai
+Graduated May 2018
+
+Certifications
+Certified Information Systems Security Professional (CISSP)
+
+EC-Council Certified Ethical Hacker (CEH)
+
+Projects
+Network Hardening Initiative
+
+Led firewall configuration project increasing resistance to cyber attacks.
+
+Incident Response Playbooks
+
+Developed playbooks accelerating triage and recovery for critical incidents.

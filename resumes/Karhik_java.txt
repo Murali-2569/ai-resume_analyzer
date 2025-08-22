@@ -1,0 +1,27 @@
+Resume 3 – Java Teacher
+
+Name: Karthik
+Email: karthik1701@example.com
+
+Phone: +91 99887 65432
+
+Summary:
+Dedicated Lecturer with 7 years of teaching Java Programming at undergraduate and postgraduate levels. Strong knowledge of Core Java, JDBC, and frameworks like Spring & Hibernate.
+
+Skills:
+Core Java & Advanced Java
+JDBC, JSP, Servlets
+Spring & Hibernate Basics
+OOP & Design Patterns
+Interactive Teaching & Lab Supervision
+
+Experience:
+Assistant Professor – IT Department
+Nirma University, Ahmedabad
+2018 – Present
+Taught Java to B.Tech and MCA students.
+Conducted workshops on Java application development.
+
+Education:
+M.Tech in Information Technology – IIT Delhi (2017)
+B.Tech in Computer Engineering – Nirma University (2015)

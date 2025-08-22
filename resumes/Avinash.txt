@@ -1,0 +1,16 @@
+Name: Priya Sharma
+Email: priya@example.com
+
+Summary:
+Machine Learning Engineer skilled in deploying ML models, APIs, and deep learning frameworks.
+
+Skills:
+- Python, TensorFlow, PyTorch, Scikit-learn
+- REST APIs, Flask, Docker
+- CNNs, NLP, Transfer Learning, Model Monitoring
+- AWS, Mlflow, Git, CI/CD
+
+Projects:
+- Image classification using CNN deployed via Flask API
+- RAG-based chatbot using LangChain and FAISS
+- ML model deployment pipeline on AWS with Docker

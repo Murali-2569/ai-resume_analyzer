@@ -1,0 +1,29 @@
+✅ Job Description – Computer Lab Technician
+
+Position: Computer Lab Technician
+Location: Hyderabad, India
+Organization: Global Institute of Technology
+
+Job Overview:
+We are seeking a Computer Lab Technician to manage and maintain computer laboratories, ensuring smooth operation of hardware, software, and network systems. The technician will provide technical support to students and faculty, perform routine maintenance, and assist in lab-based academic activities.
+
+Key Responsibilities:
+Install, configure, and troubleshoot operating systems, software, and hardware.
+Manage lab resources including PCs, printers, projectors, and networking equipment.
+Provide technical assistance to students and faculty during practical sessions.
+Maintain inventory of lab equipment and software licenses.
+Ensure cybersecurity and data backup protocols are followed.
+Support faculty in conducting programming labs (C, C++, Java, Python).
+Maintain logbooks and prepare lab usage reports.
+
+Required Skills:
+Knowledge of Windows & Linux OS installation/configuration
+Hardware troubleshooting & maintenance
+Networking basics (LAN, IP configuration, Wi-Fi setup)
+Software installation & license management
+Scripting basics (Batch, Shell, or Python preferred)
+Communication & user support skills
+
+Qualifications:
+Diploma / B.Sc. in Computer Science / IT (preferred B.Tech).
+1–3 years of lab or IT support experience.

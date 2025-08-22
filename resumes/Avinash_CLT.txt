@@ -1,0 +1,48 @@
+✅ Sample Resume – Computer Lab Technician (Full Page)
+
+Name: Dasari Avinash
+Phone: +91 98765 43210
+Email: avinash.d143@example.com
+
+Location: Hyderabad, India
+
+Professional Summary:
+Detail-oriented Computer Lab Technician with 3+ years of experience managing academic computer labs. Skilled in troubleshooting hardware/software issues, supporting programming labs, and ensuring smooth lab operations for students and faculty.
+
+Core Skills:
+OS Installation & Configuration (Windows/Linux)
+Hardware Troubleshooting & Maintenance
+Network Setup & Monitoring
+Software Installation & License Management
+Lab Resource Management
+Programming Lab Support (C, C++, Java, Python)
+Cybersecurity & Data Backup
+User Support & Communication
+
+Work Experience:
+Computer Lab Technician
+Global Institute of Technology, Hyderabad
+2021 – Present
+Managed 120+ lab computers, ensuring 95% uptime.
+Installed and configured OS, IDEs, and programming tools (Eclipse, PyCharm, Code::Blocks, VS Code).
+Assisted faculty in conducting practical sessions for C, C++, Java, and Python.
+Implemented regular system backups and antivirus updates.
+Prepared monthly lab utilization reports and inventory checks.
+IT Support Intern
+TechnoSoft Solutions, Hyderabad
+2019 – 2021
+Provided hardware/software support for office systems.
+Assisted in LAN setup and troubleshooting.
+Configured printers, projectors, and peripherals.
+
+Education:
+B.Sc. in Computer Science – Osmania University (2019)
+Diploma in Hardware & Networking – NIIT (2018)
+
+Certifications:
+CompTIA A+ (2020)
+CCNA Networking Basics (2021)
+
+Projects & Contributions:
+Lab Automation Script: Wrote batch scripts to automate system cleanup and software updates across 50+ PCs.
+Cybersecurity Initiative: Implemented user-level restrictions and antivirus monitoring for student accounts.

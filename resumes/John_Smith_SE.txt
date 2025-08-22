@@ -1,0 +1,59 @@
+John Smith
+Bangalore, India | john.smith@email.com | GitHub: github.com/johnsmithdev | LinkedIn: linkedin.com/in/johnsmith
+
+Summary
+Versatile Software Engineer with 5+ years of experience in backend and frontend development. Expert in designing scalable microservices and APIs, automating deployments, and improving software efficiency. Delivered solutions used by millions of users with increased system reliability and reduced latency.
+
+Skills
+Programming Languages: Java, Python, C++
+
+Frameworks: Spring Boot, React, Angular
+
+DevOps: Docker, Jenkins, Kubernetes
+
+Databases: MySQL, MongoDB, PostgreSQL
+
+Tools: Git, Jira, REST APIs, CI/CD pipelines
+
+Professional Experience
+Senior Software Engineer
+InnovateTech Pvt Ltd, Bangalore, India
+March 2021 – Present
+
+Migrated legacy systems to microservices architecture, decreasing deployment time by 35%.
+
+Designed and implemented RESTful APIs serving 2 million+ users monthly.
+
+Automated build and release pipelines with Docker and Jenkins, reducing release cycles by 60%.
+
+Led code reviews, improving code quality and reducing bugs by 40%.
+
+Software Engineer
+CodeCraft Solutions, Bangalore, India
+July 2018 – Feb 2021
+
+Developed user authentication modules with Spring Security, enhancing security compliance.
+
+Contributed to frontend development with React, improving UI responsiveness by 25%.
+
+Collaborated in Agile teams delivering bi-weekly software releases.
+
+Education
+Bachelor of Technology in Computer Science
+Indian Institute of Technology, Delhi
+Graduated May 2018
+
+Certifications
+Oracle Certified Java Programmer
+
+Certified Kubernetes Administrator (CKA)
+
+Projects
+E-Commerce Microservices Platform
+
+Developed backend microservices handling payment, product catalog, and user management with Spring Boot.
+
+Automated CI/CD Pipeline
+
+Created automated pipelines using Jenkins and Docker, cutting manual deployment errors by 90%.
+

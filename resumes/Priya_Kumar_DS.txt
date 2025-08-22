@@ -1,0 +1,56 @@
+Priya Kumar
+New York, NY | priya.kumar@email.com | LinkedIn: linkedin.com/in/priyakumar
+
+Summary
+Results-driven Data Scientist with over 4 years transforming data into actionable insights through advanced analytics, machine learning, and visualization techniques. Experienced in boosting campaign ROI and building predictive models deployed in cloud environments.
+
+Skills
+Programming: Python, R, SQL
+
+ML Frameworks: Scikit-learn, TensorFlow, Keras
+
+Data Visualization: Tableau, Power BI, Matplotlib, Seaborn
+
+Big Data: Spark, Hadoop (basic)
+
+Professional Experience
+Data Scientist
+AdTech Solutions, New York, NY
+July 2021 – Present
+
+Built customer segmentation models increasing campaign ROI by 60%.
+
+Automated dashboards in Tableau improving stakeholder decision-making.
+
+Developed recommendation engines lifting average order value by 12%.
+
+Collaborated with engineering and product teams for deployment in AWS.
+
+Junior Data Scientist
+Insight Analytica, New York, NY
+May 2019 – June 2021
+
+Conducted A/B tests and data analysis improving marketing conversions.
+
+Supported ETL pipeline creation reducing data lag by 30%.
+
+Created interactive reports for business teams.
+
+Education
+Master of Science in Data Science
+Columbia University
+Graduated May 2019
+
+Certifications
+Certified Data Scientist – DataCamp
+
+AWS Certified Machine Learning – Specialty
+
+Projects
+Churn Prediction Model
+
+Developed predictive models increasing customer retention by 9%.
+
+Ad Performance Dashboard
+
+Created data visualization pipeline shortening reporting time from days to hours.

@@ -1,0 +1,27 @@
+Resume 1 – C Teacher
+
+Name: Ramesh Kumar
+Email: ramesh.kumar@example.com
+
+Phone: +91 91234 56789
+
+Summary:
+Experienced Computer Science Lecturer with 6+ years of teaching expertise in C Programming. Specialized in algorithms, memory management, and system-level programming. Passionate about simplifying complex coding concepts for undergraduate students.
+
+Skills:
+C Programming (Advanced)
+Data Structures & Algorithms
+Pointers & Memory Management
+File Handling in C
+Classroom & Lab Instruction
+
+Experience:
+Assistant Professor – Computer Science
+Osmania University, Hyderabad
+2019 – Present
+Taught C Programming to 300+ students per year.
+Developed lab manuals and assignments for practical learning.
+
+Education:
+M.Tech in Computer Science – JNTU (2018)
+B.Tech in CSE – Osmania University (2016

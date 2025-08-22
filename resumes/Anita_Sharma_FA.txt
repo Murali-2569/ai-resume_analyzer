@@ -1,0 +1,53 @@
+Delhi, India | anita.sharma@email.com | LinkedIn: linkedin.com/in/anitasharma
+
+Summary
+Results-driven Forensic Analyst with expertise in digital investigations, evidence collection, and malware analysis. Supported law enforcement and corporate clients, delivering clear findings in high-profile cases.
+
+Skills
+Forensic Tools: EnCase, FTK, Autopsy, Cellebrite
+
+Evidence Collection, Chain of Custody, Log Analysis
+
+Malware Analysis, File System Analysis
+
+OS: Windows, Linux, MacOS
+
+Scripting: Python
+
+Professional Experience
+Digital Forensic Analyst
+CyberDetect India, Delhi
+Nov 2021 – Present
+
+Investigated digital evidence for 30+ legal cases, leading to 12 convictions.
+
+Performed memory and disk analysis, recovering deleted and encrypted files.
+
+Prepared expert court reports and gave testimony in criminal cases.
+
+Forensic Technician
+SecureBytes, Delhi
+May 2018 – Oct 2021
+
+Supported incident response teams during breach investigations.
+
+Assisted in mobile device forensics and password cracking projects.
+
+Education
+Bachelor of Technology in Information Security
+Indian Institute of Information Technology, Delhi
+Graduated May 2018
+
+Certifications
+GIAC Certified Forensic Analyst (GCFA)
+
+EnCase Certified Examiner
+
+Projects
+Ransomware Investigation
+
+Traced and documented the source of a phishing-based ransomware attack leading to a successful takedown.
+
+Mobile Device Forensics
+
+Analyzed evidence from smartphones for a financial fraud investigation.

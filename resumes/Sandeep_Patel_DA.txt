@@ -1,0 +1,50 @@
+Sandeep Patel
+London, UK | sandeep.patel@email.com | LinkedIn: linkedin.com/in/sandeepdata
+
+Summary
+Analytical Data Analyst with 3+ years of experience delivering actionable insights with advanced SQL, Python, and visualization tools. Proven ability to automate reporting, improve data quality, and support marketing and financial teams.
+
+Skills
+SQL, Python, Excel, Power BI, Tableau
+
+Data Cleaning, Reporting, Modeling, Visualization
+
+Strong problem-solving and communication skills
+
+Professional Experience
+Data Analyst
+Global Market Insights, London, UK
+August 2021 – Present
+
+Consolidated large datasets with SQL and Python, reducing retrieval times by 75%.
+
+Created weekly performance reports driving 20% improvement in campaign targeting.
+
+Developed interactive dashboards in Power BI and Excel for executives.
+
+Junior Data Analyst
+MarketPulse Ltd, London, UK
+May 2019 – July 2021
+
+Assisted in data cleaning and reporting to improve data integrity.
+
+Supported marketing team with trend analysis and customer segmentation.
+
+Education
+Bachelor of Science in Statistics
+University College London
+Graduated May 2019
+
+Certifications
+Microsoft Certified: Data Analyst Associate
+
+Google Data Analytics Professional Certificate
+
+Projects
+Sales Performance Reporting
+
+Designed dashboards enabling faster, data-driven marketing decisions.
+
+Customer Segmentation Analysis
+
+Analyzed customer data identifying key segments leading to targeted campaigns.

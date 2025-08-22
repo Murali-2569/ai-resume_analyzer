@@ -1,0 +1,13 @@
+JD 3 – Java Lecturer
+
+We seek a Java Faculty Member to teach Core and Advanced Java.
+
+Requirements:
+
+Proficiency in Core Java, JDBC, JSP, Servlets
+
+Familiarity with Spring/Hibernate preferred
+
+Strong teaching skills and academic experience
+
+M.Tech/M.Sc. in Computer Science

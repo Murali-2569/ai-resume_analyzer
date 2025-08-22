@@ -1,0 +1,13 @@
+JD 2 – C++ Faculty
+
+Looking for a C++ Programming Instructor to train students in OOP concepts and application development.
+
+Requirements:
+
+Proficiency in C++ and OOP
+
+Knowledge of STL, exception handling, and design patterns
+
+Excellent communication skills
+
+Postgraduate degree in Computer Science or related field

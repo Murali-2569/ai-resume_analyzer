@@ -1,0 +1,29 @@
+Resume 4 – Python Teacher
+
+Name: Bharath Karanam
+Email: bharath.143@example.com
+
+Phone: +91 97654 32109
+
+Summary:
+Passionate Python Educator with 4 years of teaching experience in Python Programming and Data Science. Expertise in Python libraries, automation, and hands-on project guidance.
+
+Skills:
+Core Python & Advanced Python
+Pandas, NumPy, Matplotlib
+OOP with Python
+Web Development (Flask/Django basics)
+Teaching & Curriculum Design
+
+Experience:
+Lecturer – Data Science & AI
+Lovely Professional University, Punjab
+2021 – Present
+
+Conducted Python programming labs for B.Tech students.
+
+Designed a "Python for Data Science" short-term certification course.
+
+Education:
+M.Sc. in Data Science – LPU (2020)
+B.Sc. in Computer Science – Delhi University (2018)

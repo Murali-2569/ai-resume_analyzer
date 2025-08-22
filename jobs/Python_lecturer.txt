@@ -1,0 +1,13 @@
+JD 4 – Python Lecturer
+
+We are hiring a Python Instructor to teach undergraduate and postgraduate courses.
+
+Requirements:
+
+Strong foundation in Python (Core & Advanced)
+
+Knowledge of data analysis libraries (Pandas, NumPy, etc.)
+
+Ability to guide students in projects
+
+Master’s degree in Data Science/Computer Science

@@ -1,0 +1,17 @@
+**Role:** Software Engineer Trainee  
+**Location:** PAN India  
+**Experience:** 0–1 years  
+
+**Responsibilities:**  
+- Assist in the development and maintenance of scalable software solutions  
+- Participate in code reviews and agile ceremonies  
+- Contribute to database design and basic testing  
+
+**Skills Required:**  
+- Strong basics in programming (Java/Python preferred)  
+- Understanding of SDLC and testing principles  
+- Good communication and problem-solving attitude  
+
+**Preferred:**  
+- Internship or training certificate from Infosys Springboard or similar platform  
+- Final year projects with live demo or GitHub links 

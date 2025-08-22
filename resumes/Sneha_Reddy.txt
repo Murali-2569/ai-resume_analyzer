@@ -1,0 +1,26 @@
+Sample Resume 3 – Lab Technician
+
+Name: Sneha Reddy
+Email: sneha.reddy@example.com
+
+Phone: +91 99876 54321
+
+Summary:
+Detail-oriented Lab Technician with 4 years of experience in diagnostic laboratories. Skilled in handling lab equipment, preparing specimens, and maintaining accurate reports.
+
+Skills:
+Laboratory Testing & Analysis
+Equipment Calibration
+Sample Preparation
+Safety & Compliance
+Data Recording
+
+Experience:
+Lab Technician – Apollo Diagnostics, Bangalore
+2020 – Present
+Performed routine tests on blood, urine, and tissue samples.
+Ensured compliance with safety standards and maintained laboratory instruments.
+
+Education:
+Diploma in Medical Laboratory Technology (DMLT) – Manipal University (2019)
+B.Sc. in Biology – Bangalore University (2017)

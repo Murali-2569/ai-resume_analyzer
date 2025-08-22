@@ -1,0 +1,27 @@
+Resume 2 – C++ Teacher
+
+Name: Sangeetha Naidu
+Email: sangeetha.20@example.com
+
+Phone: +91 98765 12345
+
+Summary:
+Computer Science Faculty with 5 years of teaching C++ and Object-Oriented Programming. Skilled in STL, design patterns, and real-time coding examples. Focused on preparing students for software industry roles.
+
+Skills:
+C++ Programming
+OOP Concepts & Design
+STL (Standard Template Library)
+Exception Handling
+UML Diagrams & Design Patterns
+
+Experience:
+Lecturer – Computer Applications
+Christ University, Bangalore
+2020 – Present
+Designed course modules for C++ & OOP.
+Guided 50+ students in mini-projects using C++.
+
+Education:
+M.Sc. in Computer Applications – Bangalore University (2019)
+B.Sc. in Computer Science – Bangalore University (2017)

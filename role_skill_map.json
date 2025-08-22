@@ -1,6 +1,6 @@
 {
     "Teacher": ["lesson planning", "curriculum design", "student engagement", "assessment", "communication", "subject knowledge", "classroom management"],
-    "Lab Technician": ["laboratory equipment", "safety protocols", "sample analysis", "data recording", "technical support", "maintenance"],
+    "Lab Technician": ["laboratory equipment", "safety protocols", "sample analysis", "data recording", "technical support", "maintenance","Medical laboratory technology", "Hematology", "Microbiology", "Clinical Chemistry", "Phlebotomy", "Microbiology", "communication skills"],
     "Machine Learning Engineer": ["machine learning", "tensorflow", "scikit-learn", "pandas", "classification", "prediction", "models", "deep learning", "algorithms"],
     "AI/ML Researcher": ["deep learning", "neural networks", "reinforcement learning", "NLP", "generative models", "research", "experiments", "pytorch", "transformers"],
     "Data Scientist": ["data analysis", "statistics", "python", "machine learning", "visualization", "pandas", "numpy", "regression", "classification"],
@@ -32,5 +32,39 @@
     "Database Administrator": ["database management", "sql", "performance tuning", "backup and recovery", "data modeling", "database security", "oracle", "mysql", "postgresql"],
     "Sales Engineer": ["technical sales", "product demonstrations", "customer relationship management", "solution selling", "sales presentations", "negotiation skills", "crm software", "technical support"],
     "SEO Specialist": ["search engine optimization", "keyword research", "on-page optimization", "off-page optimization", "content optimization", "analytics", "google search console", "seo tools"],
-    "Digital Marketing Specialist": ["digital marketing", "social media marketing", "content marketing", "email marketing", "seo", "ppc", "analytics", "google ads", "facebook ads", "marketing automation"]
+    "Digital Marketing Specialist": ["digital marketing", "social media marketing", "content marketing", "email marketing", "seo", "ppc", "analytics", "google ads", "facebook ads", "marketing automation"],
+    
+    "C Teacher": [
+        "C Programming", "Pointers", "Memory Management", 
+        "File Handling", "Data Structures", "Algorithms", "Debugging"
+    ],
+    "C++ Teacher": [
+        "C++ Programming", "OOP", "STL", "Templates", 
+        "Exception Handling", "Design Patterns"
+    ],
+    "Java Teacher": [
+        "Core Java", "Advanced Java", "JDBC", 
+        "Servlets", "JSP", "Spring", "Hibernate", "JavaFX", "Data Structures", "Algorithms"
+    ],
+    "Python Teacher": [
+        "Python Programming", "OOP", "NumPy",
+        "Pandas", "Matplotlib", "Flask", "Django"," Data Analysis"
+    ],
+    "Computer Lab Technician": [
+        "Operating System Installation",
+        "Windows Administration",
+        "Linux Administration",
+        "Hardware Troubleshooting",
+        "Networking Basics",
+        "Software Installation",
+        "License Management",
+        "Lab Resource Management",
+        "Programming Lab Support",
+        "Data Backup",
+        "Cybersecurity Basics",
+        "Technical Support",
+        "Communication Skills"
+    ]
+
 }
+

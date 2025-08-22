@@ -1,0 +1,60 @@
+Jane Doe
+San Francisco, CA | jane.doe@email.com | LinkedIn: linkedin.com/in/janedoe | GitHub: github.com/janedoe
+
+Summary
+Skilled Machine Learning Engineer with 4+ years of experience developing scalable predictive models and deploying ML pipelines in cloud environments. Proven track record of increasing model accuracy by 12% and reducing data processing time by 40%. Adept at applying deep learning and NLP techniques to solve complex business challenges.
+
+Skills
+Programming: Python, R, Java, C++
+
+ML Frameworks: TensorFlow, PyTorch, Scikit-learn, Keras
+
+Cloud Platforms: AWS, Azure, GCP
+
+Data Tools: SQL, Pandas, NumPy, Spark
+
+Other: Model deployment, ETL pipelines, Data visualization with Tableau
+
+Professional Experience
+Machine Learning Engineer
+Tech Solutions Inc., San Francisco, CA
+June 2022 – Present
+
+Developed NLP pipeline with TensorFlow reducing document processing time by 45%.
+
+Deployed ML models on AWS to predict customer churn, increasing retention rate by 9%.
+
+Automated data preprocessing workflows saving 120 engineer hours monthly with Python scripts.
+
+Collaborated with cross-functional teams improving fraud detection accuracy by 20%.
+
+Data Scientist Intern
+DataSecure, San Jose, CA
+Jan 2021 – May 2022
+
+Assisted in anomaly detection algorithms enhancing fraud detection rates by 15%.
+
+Created dashboards with Tableau leading to 10% improved stakeholder engagement.
+
+Supported data analysis and visualization efforts across product teams.
+
+Education
+Bachelor of Science in Computer Science
+University of California, Berkeley
+Graduated May 2020
+
+Relevant coursework: Machine Learning, Data Mining, Statistical Analysis
+
+Certifications
+Microsoft Certified: Azure Data Scientist Associate
+
+AWS Certified Machine Learning – Specialty
+
+Projects
+Customer Sentiment Analysis
+
+Built an NLP model to classify customer feedback, achieving 85% accuracy and reducing manual review by 35%.
+
+Fraud Detection System
+
+Developed supervised learning models detecting fraudulent transactions with 92% precision.
