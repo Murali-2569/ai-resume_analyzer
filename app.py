@@ -59,7 +59,7 @@ def split_present_missing(resume_text, skills):
 # ========================== JOB SEEKER MODE ==========================
 if st.session_state.role_choice == "Job Seeker 🎓":
     st.subheader(" 📑 Job Seeker Section... ")
-    st.success("👋 Welcome Job Seeker! Upload your resumes and a JD to check your match scores and skill gaps.")
+    st.success("👋 Welcome Job Seeker! Upload your Resume and a JD to check your match scores and skill gaps.")
     jd_file = st.file_uploader("📑 Upload Company's Job Description (.pdf or .txt)", type=["pdf", "txt"])
     st.markdown(" ")
     resumes = st.file_uploader("📂 Upload Your Resume (.pdf or .txt)", type=["pdf", "txt"], accept_multiple_files=True)
@@ -204,7 +204,7 @@ if st.session_state.role_choice == "Job Seeker 🎓":
 # ========================== RECRUITER MODE ==========================
 elif st.session_state.role_choice == "Recruiter 🧑‍💼":
     st.subheader("📑 Recruiter Section...")
-    st.success("👋 Welcome Recruiter! Upload a JD and candidate resumes to quickly find the best matches.")
+    st.success("👋 Welcome Recruiter! Upload Your Company's JD and Candidate Resumes to quickly find the best matches.")
     jd_file = st.file_uploader("📑 Upload Your Organization's Job Description (.pdf or .txt)", type=["pdf", "txt"])
     st.markdown(" ")
     resumes = st.file_uploader("📂 Upload Candidate Resumes (.pdf or .txt)", type=["pdf", "txt"], accept_multiple_files=True)
