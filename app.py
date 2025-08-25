@@ -66,7 +66,7 @@ if st.session_state.role_choice == "Job Seeker 🎓":
 
     if jd_file and resumes:
         jd_text = jd_file.read().decode("utf-8", errors="ignore")
-        jd_role = extract_role_from_jd(jd_text) or "Machine Learning Engineer"
+        jd_role = extract_role_from_jd(jd_text) 
 
         st.success(f"✅ Job description uploaded! Detected Role: `{jd_role}`")
         
@@ -211,7 +211,7 @@ elif st.session_state.role_choice == "Recruiter 🧑‍💼":
 
     if jd_file and resumes:
         jd_text = jd_file.read().decode("utf-8", errors="ignore")
-        jd_role = extract_role_from_jd(jd_text) or "Software Engineer"
+        jd_role = extract_role_from_jd(jd_text) 
 
         st.success(f"✅ JD uploaded! Detected Role: `{jd_role}`")
         st.write("### 🧠 Job Description Preview:")
